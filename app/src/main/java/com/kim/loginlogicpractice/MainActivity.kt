@@ -10,16 +10,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        logBtn.setOnClickListener {
+logBtn.setOnClickListener { 
+    val inputId = idEdt.text.toString()
+    val inputPw = psEdt.text.toString()
+    
+    if( inputId == "daeding7" && inputPw =="jomy486"){
 
-        val email = EmailTxt.text.toString()
-        val password = PasswordTxt.text.toString()
+        Toast.makeText(this, "관리자입니다", Toast.LENGTH_SHORT).show()
+    }
+    else{
 
-        if(email ="admin@test.com" && password="qwer"){
-            Toast.makeText(this, "관리자입니다", Toast.LENGTH_SHORT).show()
-        }
-        else{
-            Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show()
-
+        Toast.makeText(this, "잘못된 정보입니다", Toast.LENGTH_SHORT).show()
     }
 }
+
+    }
+    }
