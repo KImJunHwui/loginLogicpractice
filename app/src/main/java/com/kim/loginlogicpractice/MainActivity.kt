@@ -11,12 +11,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 logBtn.setOnClickListener { 
-    val inputId = idEdt.text.toString()
-    val inputPw = psEdt.text.toString()
-    
-    if( inputId == "daeding7" && inputPw =="jomy486"){
+    val Id = idEdt.text.toString()
+    val Pw = psEdt.text.toString()
 
-        Toast.makeText(this, "관리자입니다", Toast.LENGTH_SHORT).show()
+    if( Id == "daeding7" && Pw =="jomy486"){
+//  관리자 이름 변수로 지정
+    val name = "김준휘 바봅"
+
+        Toast.makeText(this, "${name}관리자입니다", Toast.LENGTH_SHORT).show()
     }
     else{
 
